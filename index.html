@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat Samar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="auth-container">
+    <h2>Masuk untuk Chat</h2>
+    <button id="google-login">Login dengan Google</button>
+    <button id="phone-login">Login dengan Nomor HP</button>
+    <input type="tel" id="phone-number" placeholder="Contoh: +6281234567890" />
+    <button id="send-otp">Kirim OTP</button>
+    <input type="text" id="otp" placeholder="Masukkan OTP" />
+    <button id="verify-otp">Verifikasi OTP</button>
+  </div>
+
+  <div id="chat-container" style="display: none;">
+    <h2>💬 Chat Samar</h2>
+    <p><strong>Anda login sebagai:</strong> <span id="user-name"></span></p>
+    <div id="chat-box"></div>
+    <input type="text" id="message-input" placeholder="Ketik pesan..." />
+    <button id="send-btn">Kirim</button>
+    <button id="logout">Logout</button>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
